@@ -31,6 +31,12 @@ void printTrieHelper(TrieNode *root, char *buffer, int k);
 void printTrie(TrieNode *root, int useSubtrieFormatting);
 char *toLower(char *str);
 
+typedef struct Corpus
+{
+	TrieNode *root;
+	int num_word;
+	int num_sent;
+}
 
 int main(int argc, char **argv)
 {
@@ -351,17 +357,14 @@ int hasChildren(TrieNode *root)
 	return 0;
 }
 
-// EDITING...
-// No function as of 9:40 06 May 2014
+// Returns 1 if there is any punctuation in the word.
 int hasPunct(char *str)
 {
 	int i;
 	
-	for(i = 0; i < strlen(str); i++)
-	{
-		if(str[i] < 65 && str[i] > 32)
-	}
-	
+	for(i = 0; i < strlen(str) -1; i++)
+		if(!isalpha(str[i]))
+			return 1;
 	
 	return 0;
 }
