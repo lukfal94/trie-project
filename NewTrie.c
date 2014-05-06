@@ -4,8 +4,8 @@
 // NewTrie.c
 // =============
 /*
-	Inspired by (i.e. copied from) Trie.c, modified to work on corpuses with minimal
-	formatting.
+	A program that takes in a corpus (with little formatting) and collects statistics
+	and information about the text.
 */
 
 #include <stdio.h>
@@ -351,13 +351,17 @@ int hasChildren(TrieNode *root)
 	return 0;
 }
 
-// Returns 1 if str ends with a '?', '!', or '.'
-int hasPunt(char *str)
+// EDITING...
+// No function as of 9:40 06 May 2014
+int hasPunct(char *str)
 {
-	int last = strlen(str) - 1;
+	int i;
 	
-	if(str[last] == '.' || str[last] == '?' || str[last] == '!')
-		return 1;
+	for(i = 0; i < strlen(str); i++)
+	{
+		if(str[i] < 65 && str[i] > 32)
+	}
+	
 	
 	return 0;
 }

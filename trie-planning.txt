@@ -1,0 +1,17 @@
+Planning for NewTrie
+====================
+
+- Objectives
+	1. Create a program that will give rich statistics about a corpus including:
+		- Concurrence of words
+		- Number of times a word appears
+		- Number of words
+		- Number of sentences
+
+- Tasks
+	1. Add "corpus" struct
+	2. Verify words before input
+		a) No intermittent punctuation
+		b) If last word, start new sentence
+		c) Scan for commas, colon, semi-colon.
+	3. Modify functions to update corpus data.
